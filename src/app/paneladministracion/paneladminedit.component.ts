@@ -11,6 +11,8 @@ import { User } from '../interfaces/user.interface';
 })
 export class PaneladmineditComponent implements OnInit {
   role: any= [];
+  roles: string[] = [];
+  authority: string;
   //user: User;
   user: User = {
     username: null,

@@ -11,6 +11,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
 export class UserProfileComponent implements OnInit {
   usuarios: any[] = [];
   info: any;
+  roles: string[] = [];
+  authority: string;
 
   constructor(private userService: UserService, private token: TokenStorageService ) {
     this.userService.getUser(this.token.getUsername())

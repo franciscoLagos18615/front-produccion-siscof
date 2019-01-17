@@ -11,6 +11,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
   styles: []
 })
 export class PresupuestoComponent implements OnInit {
+  roles: string[] = [];
+  authority: string;
   presupuesto: Presupuesto = {
     date: null,
     governance: '',

@@ -10,7 +10,9 @@ import { TokenStorageService } from '../auth/token-storage.service';
 export class PaneladministracionComponent implements OnInit {
   usuarios: any[] = [];
   info: any;
-  segundoRol: boolean: false;
+  segundoRol: boolean = false;
+  roles: string[] = [];
+  authority: string;
 
   constructor(private userService: UserService, private token: TokenStorageService) { 
     this.userService.getAllUser()

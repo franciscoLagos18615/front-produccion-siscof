@@ -12,7 +12,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
   styles: []
 })
 export class ItemsComponent implements OnInit {
-
+  roles: string[] = [];
+  authority: string;
   item: Item = {
     bill_number: null,
     budget_item: '',

@@ -16,7 +16,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
   styles: []
 })
 export class RemesaComponent implements OnInit {
-
+  roles: string[] = [];
+  authority: string;
   remesa: Remesa = {
     request: '',
     status: 'Realizando',

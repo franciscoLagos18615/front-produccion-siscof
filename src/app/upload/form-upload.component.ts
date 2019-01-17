@@ -16,6 +16,8 @@ export class FormUploadComponent implements OnInit {
   progress: { percentage: number } = { percentage: 0 };
   id: number;
   info: any;
+  roles: string[] = [];
+  authority: string;
 
   constructor(private uploadService: UploadfileService, private router: Router, private route: ActivatedRoute,
     private token: TokenStorageService, private location: Location) {

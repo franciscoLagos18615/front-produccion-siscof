@@ -14,6 +14,8 @@ import { Location } from '@angular/common';
 })
 export class DetailsUploadComponent implements OnInit {
   @Input() fileUpload: string;
+  roles: string[] = [];
+  authority: string;
   id: number;
   showFile = false;
   fileUploads: Observable<string[]>

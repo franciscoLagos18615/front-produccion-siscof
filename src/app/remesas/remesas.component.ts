@@ -12,6 +12,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
   templateUrl: './remesas.component.html',
 })
 export class TableListComponent implements OnInit {
+  roles: string[] = [];
+  authority: string;
   remesas: any[] = [];
   info: any;
 

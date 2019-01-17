@@ -17,6 +17,8 @@ import { Remesa } from '../interfaces/remesa.interface';
 @Injectable()
 export class RemesadetailComponent implements OnInit {
   //@Input() fileUpload: string;
+  roles: string[] = [];
+  authority: string;
   remesas: any[] = [];
   urlExportable: string;
   id: number;

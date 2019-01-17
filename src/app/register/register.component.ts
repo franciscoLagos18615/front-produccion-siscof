@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['/register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  roles: string[] = [];
+  authority: string;
   form: any = {};
   role: any= [];
 

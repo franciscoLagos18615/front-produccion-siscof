@@ -11,6 +11,8 @@ import { TokenStorageService } from '../auth/token-storage.service';
   styles: []
 })
 export class PresupuestopapeleraComponent implements OnInit {
+  roles: string[] = [];
+  authority: string;
   presupuestos: any[] = [];
   presupuesto: Presupuesto;
   info: any;
