@@ -80,7 +80,7 @@ export class TableListComponent implements OnInit {
   borraRemesa(key$: number){
 
     //this._remesasService.borrarRemesa(key$)
-    let remesaURL = 'http://localhost:8080/api/consignment/'
+    let remesaURL = 'http://142.93.113.147:8080/api/consignment/'
     let url = `${remesaURL}${key$}`;
     console.log("aquii",url);
     if(window.confirm('¿Esta seguro que desea Eliminar esta remesa ?')){
@@ -96,7 +96,7 @@ export class TableListComponent implements OnInit {
   //metodo para cambiar estado de la remesa
   
   cambiarEstado(remesa: Remesa, id1: number, estado: string) {
-    let consignmentURL= 'http://localhost:8080/api/consignment/'
+    let consignmentURL= 'http://142.93.113.147:8080/api/consignment/'
     let body = JSON.stringify(remesa);
     let headers = new Headers({
       'Content-Type':'application/json'

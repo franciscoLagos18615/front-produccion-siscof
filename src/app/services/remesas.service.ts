@@ -10,11 +10,11 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class RemesasService {
 
-  remesasURL = 'http://localhost:8080/api/consignment/new';
-  remesaURL = 'http://localhost:8080/api/consignment/';
-  remesasAll = 'http://localhost:8080/api/consignment/all';
-  remesasAllActive = 'http://localhost:8080/api/consignment/allActive';
-  remesasAllInactive = 'http://localhost:8080/api/consignment/allInactive';
+  remesasURL = 'http://142.93.113.147:8080/api/consignment/new';
+  remesaURL = 'http://142.93.113.147:8080/api/consignment/';
+  remesasAll = 'http://142.93.113.147:8080/api/consignment/all';
+  remesasAllActive = 'http://142.93.113.147:8080/api/consignment/allActive';
+  remesasAllInactive = 'http://142.93.113.147:8080/api/consignment/allInactive';
 
 
 

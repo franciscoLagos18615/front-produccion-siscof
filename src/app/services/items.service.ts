@@ -8,8 +8,8 @@ import { HttpClient, HttpRequest } from '@angular/common/http';
 
 @Injectable()
 export class ItemsService {
-  itemURL = 'http://localhost:8080/api/consignment/'
-  itemURLAll = 'http://localhost:8080/api/consignment/{consignmentId}/items'
+  itemURL = 'http://142.93.113.147:8080/api/consignment/'
+  itemURLAll = 'http://142.93.113.147:8080/api/consignment/{consignmentId}/items'
 
 
   constructor(private http: Http, private http2: HttpClient) { }

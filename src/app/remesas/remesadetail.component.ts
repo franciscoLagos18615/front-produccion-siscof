@@ -19,7 +19,7 @@ export class RemesadetailComponent implements OnInit {
   //@Input() fileUpload: string;
   roles: string[] = [];
   authority: string;
-  remesas: any[] = [];
+  remesas: any ;
   urlExportable: string;
   id: number;
   items: any[]=[];
@@ -133,7 +133,7 @@ export class RemesadetailComponent implements OnInit {
 
   //metodo para obtener una remesa 
   getRemesa(id_consignment$: number){
-    let remesaURL = 'http://localhost:8080/api/consignment/'
+    let remesaURL = 'http://142.93.113.147:8080/api/consignment/'
     let url = `${remesaURL}${id_consignment$}`;
     return this.http.get(url)
       .pipe(
@@ -146,7 +146,7 @@ export class RemesadetailComponent implements OnInit {
 
   //metodo que retorna el listado de items de una remesa
   getItemForRemesa(id_consignment$: number){
-    let itemURL = 'http://localhost:8080/api/consignment/'
+    let itemURL = 'http://142.93.113.147:8080/api/consignment/'
     let itemAllForRemesas = `${itemURL}${id_consignment$}/items`;
     return this.http.get(itemAllForRemesas)
       .pipe(
@@ -158,7 +158,7 @@ export class RemesadetailComponent implements OnInit {
   //metodo que cambia el estado de un item
   //http://localhost:8080/api/consignment/2/item/80/aprobado
   cambiarEstado(item: Item, id1: number, id2: number , estado: string) {
-    let itemURL= 'http://localhost:8080/api/consignment/'
+    let itemURL= 'http://142.93.113.147:8080/api/consignment/'
     let body = JSON.stringify(item);
     let headers = new Headers({
       'Content-Type':'application/json'
@@ -197,7 +197,7 @@ export class RemesadetailComponent implements OnInit {
 
 //METODO PARA ACTUALIZAR EL ESTADO DE LA REMESA, ES DECIR ENVIAR PA LA REVISION DE LA UPF
 enviarAUPF(remesa: Remesa, id1: number, estado: string) {
-  let remesaURL= 'http://localhost:8080/api/consignmentSendUPF/'
+  let remesaURL= 'http://142.93.113.147:8080/api/consignmentSendUPF/'
   let body = JSON.stringify(remesa);
   let headers = new Headers({
     'Content-Type':'application/json'
@@ -222,7 +222,7 @@ enviarAUPF(remesa: Remesa, id1: number, estado: string) {
 //fin del metodo
 //metodo para aprobar, aprobar parcialmente o rechazar la remesa
 cambiarEstadoDeRemesa(remesa: Remesa, id1: number, estado: string) {
-  let urlCambiarEstado= 'http://localhost:8080/api/consignmentDecision/'
+  let urlCambiarEstado= 'http://142.93.113.147:8080/api/consignmentDecision/'
   let body = JSON.stringify(remesa);
   let headers = new Headers({
     'Content-Type':'application/json'
@@ -278,7 +278,7 @@ cambiarEstadoDeRemesa(remesa: Remesa, id1: number, estado: string) {
 //method that return total sum money consignment in relationship items
 getSumaConsignment(id_consignment$: number){
   //http://localhost:8080/api/consignment/127/total
-  let remesaURL = 'http://localhost:8080/api/consignment/'
+  let remesaURL = 'http://142.93.113.147:8080/api/consignment/'
   let url = `${remesaURL}${id_consignment$}/total`;
    return this.http.get(url)
      .pipe(
@@ -293,7 +293,7 @@ getSumaConsignment(id_consignment$: number){
 
   //metodo para obtener el nombre del archivo exportable excel
   getNombreExcel(id_consignment$: number){
-    let remesaURL = 'http://localhost:8080/api/consignment/'
+    let remesaURL = 'http://142.93.113.147:8080/api/consignment/'
     let url = `${remesaURL}${id_consignment$}/nombre`;
    return this.http.get(url)
      .pipe(
@@ -308,7 +308,7 @@ getSumaConsignment(id_consignment$: number){
 
   //metodo que retorna el archivo exportable
   getExport(id_consignment$: number){
-    let remesaURL = 'http://localhost:8080/api/consignment/'
+    let remesaURL = 'http://142.93.113.147:8080/api/consignment/'
     let url = `${remesaURL}${id_consignment$}/export`;
     console.log('url del export es :', url);
      return url;
@@ -317,7 +317,7 @@ getSumaConsignment(id_consignment$: number){
   }
   //metodo que extrae el json con el formato de los items de acuerdo a la UPF
   getFormatoJsonItems(id_consignment:number){
-    let urlFormatoJson = 'http://localhost:8080/api/consignment/';
+    let urlFormatoJson = 'http://142.93.113.147:8080/api/consignment/';
     let url = `${urlFormatoJson}${id_consignment}/items/excel`;
     return this.http.get(url)
      .pipe(

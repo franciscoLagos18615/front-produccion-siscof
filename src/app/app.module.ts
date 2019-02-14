@@ -14,7 +14,7 @@ import { AuthService } from './auth/auth.service';
 import { TokenStorageService } from './auth/token-storage.service';
 import { AuthGuardService } from './guard/auth-guard.service';
 import { UploadfileService } from './services/uploadfile.service';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -99,7 +99,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 
   ],
   providers: [RemesasService, ItemsService, PresupuestosService, ExportexcelService, UserService, httpInterceptorProviders, AuthService,
-     TokenStorageService, AuthGuardService, UploadfileService ],
+     TokenStorageService, AuthGuardService, UploadfileService, {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

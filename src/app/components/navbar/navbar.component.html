@@ -33,7 +33,7 @@
                 </li>
             -->
                 <li class="nav-item" >
-                    <a class="nav-link" href="/register" *ngIf="authority === 'admin'">
+                    <a class="nav-link" [routerLink] = "['/register']" >
                             <i class="fas fa-user-plus"></i>
                          Registrarse
                         <p>
@@ -42,9 +42,9 @@
                     </a>
                 </li>
                 <li class="nav-item" >
-                    <a class="nav-link" href="/login" *ngIf="!authority">
+                    <a class="nav-link" [routerLink] = "['/login']" *ngIf="!authority">
                         <i class="fas fa-sign-in-alt"></i>
-                         Iniciar Sesion
+                         Iniciar Sesión
                         <p>
                             <span class="d-lg-none d-md-block">Account</span>
                         </p>
@@ -54,7 +54,7 @@
                     <a class="nav-link" 
                     (click)="logout()">
                         <i class="fas fa-sign-out-alt"></i>
-                         Cerrar Sesion
+                         Cerrar Sesión
                         <p>
                             <span class="d-lg-none d-md-block">Account</span>
                         </p>

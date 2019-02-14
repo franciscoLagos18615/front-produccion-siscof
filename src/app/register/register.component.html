@@ -23,7 +23,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="username">Ingrese el nombre que ocupara al iniciar sesion</label>
+                          <label for="username">Ingrese el nombre que ocupara al iniciar sesión</label>
                           <input type="text" class="form-control fadeIn second" name="username" placeholder="IgnacioGonzalez" [(ngModel)]="form.username" #username="ngModel"
                             required />
                           <div *ngIf="f.submitted && username.invalid">
@@ -31,7 +31,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                            <h4>Seleccione el perfil</h4>
+                            <h4>Seleccione el o los perfiles del usuario</h4>
                           <div class="form-check" *ngFor="let cat of categories">
                               <input type="checkbox" style="margin: -23px; opacity: 2;" (change)="onChange(cat.name, $event.target.checked)" name="{{ cat.name }}" id="{{cat.name}}" 
                                required>

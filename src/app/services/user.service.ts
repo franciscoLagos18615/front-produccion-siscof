@@ -14,14 +14,14 @@ const httpOptions = {
 @Injectable()
 export class UserService {
 
-  private userUrl = 'http://localhost:8080/api/test/user';
-  private pmUrl = 'http://localhost:8080/api/test/pm';
-  private adminUrl = 'http://localhost:8080/api/test/admin';
-  private urlRemesa = 'http://localhost:8080/api/remesa/new';
-  private urlgetUserFor = 'http://localhost:8080/api/auth/user/';
-  private urlGetUser = 'http://localhost:8080/api/auth/username/';
-  private urlGetAlluser = 'http://localhost:8080/api/auth/user/all';
-  private urlUserUpdate = 'http://localhost:8080/api/auth/UserUpdate/'
+  private userUrl = 'http://142.93.113.147:8080/api/test/user';
+  private pmUrl = 'http://142.93.113.147:8080/api/test/pm';
+  private adminUrl = 'http://142.93.113.147:8080/api/test/admin';
+  private urlRemesa = 'http://142.93.113.147:8080/api/remesa/new';
+  private urlgetUserFor = 'http://142.93.113.147:8080/api/auth/user/';
+  private urlGetUser = 'http://142.93.113.147:8080/api/auth/username/';
+  private urlGetAlluser = 'http://142.93.113.147:8080/api/auth/user/all';
+  private urlUserUpdate = 'http://142.93.113.147:8080/api/auth/UserUpdate/'
 
   constructor(private http: HttpClient, private http2: Http) { }
 

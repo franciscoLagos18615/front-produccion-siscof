@@ -6,11 +6,11 @@ import {map} from 'rxjs/operators';
 
 @Injectable()
 export class PresupuestosService {
-  presupuestosURL = 'http://localhost:8080/api/budget/new';
-  presupuestoURL = 'http://localhost:8080/api/budget/';
-  presupuestosAll = 'http://localhost:8080/api/budget/all';
-  presupuestosAllActive = 'http://localhost:8080/api/budget/allActive';
-  presupuestosAllInactive = 'http://localhost:8080/api/budget/allInactive';
+  presupuestosURL = 'http://142.93.113.147:8080/api/budget/new';
+  presupuestoURL = 'http://142.93.113.147:8080/api/budget/';
+  presupuestosAll = 'http://142.93.113.147:8080/api/budget/all';
+  presupuestosAllActive = 'http://142.93.113.147:8080/api/budget/allActive';
+  presupuestosAllInactive = 'http://142.93.113.147:8080/api/budget/allInactive';
 
   seCreo: boolean = false;
   constructor(private http: Http) { }

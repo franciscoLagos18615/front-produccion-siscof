@@ -5,7 +5,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.config.json",
-    "build": "ng build",
+    "build": "ng build --prod",
+    "postbuild": "npm run deploy",
+    "predeploy": "rimraf ../backend-produccion-siscof/src/main/resources/static && mkdirp ../backend-produccion-siscof/src/main/resources/static",
+    "deploy": "copyfiles -f dist/** ../backend-produccion-siscof/src/main/resources/static",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

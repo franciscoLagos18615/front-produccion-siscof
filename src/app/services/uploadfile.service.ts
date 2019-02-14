@@ -12,7 +12,7 @@ export class UploadfileService {
   constructor(private http: HttpClient, private http2: Http) { }
 
   pushFileToStorage(file: File, id: number) {
-    let url1= 'http://localhost:8080/api/file/';
+    let url1= 'http://142.93.113.147:8080/api/file/';
     let url2 = `${url1}${id}/upload`;
     const formdata: FormData = new FormData();
 
@@ -39,7 +39,7 @@ export class UploadfileService {
   }
 
   getFiles(id: number){
-    let url = 'http://localhost:8080/api/file/';
+    let url = 'http://142.93.113.147:8080/api/file/';
     let url2= `${url}${id}`;
     return this.http.get(url2);
   }
@@ -47,7 +47,7 @@ export class UploadfileService {
   //metodo que extrae todos los archivos de acuerdo a un item_id
 
   getFilesForItemId(id: number){
-    let url = 'http://localhost:8080/api/file/';
+    let url = 'http://142.93.113.147:8080/api/file/';
     let url2 = `${url}${id}/all`;
     console.log('la url del get item for item id es : ',url2);
     return this.http2.get(url2)

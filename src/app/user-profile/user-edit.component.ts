@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styles: []
 })
 export class UserEditComponent implements OnInit {
+  usuarios: any[] = [];
   roles: string[] = [];
   authority: string;
   role: any= [];

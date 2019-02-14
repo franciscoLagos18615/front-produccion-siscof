@@ -9,7 +9,7 @@ import { TokenStorageService } from '../auth/token-storage.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  usuarios: any[] = [];
+  usuarios: any ;
   info: any;
   roles: string[] = [];
   authority: string;

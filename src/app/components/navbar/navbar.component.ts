@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
     private roles: string[];
-  private authority: string;
+      authority: string;
 
     constructor(location: Location,  private element: ElementRef, private router: Router, private token: TokenStorageService) {
       this.location = location;

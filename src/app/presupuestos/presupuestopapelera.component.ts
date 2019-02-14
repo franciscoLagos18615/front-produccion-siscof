@@ -79,7 +79,7 @@ export class PresupuestopapeleraComponent implements OnInit {
   borraPresupuesto(key$: number) {
 
     //this._remesasService.borrarRemesa(key$)
-    let presupuestoURL = 'http://localhost:8080/api/budget/'
+    let presupuestoURL = 'http://142.93.113.147:8080/api/budget/'
     let url = `${presupuestoURL}${key$}`;
     console.log("aquii",url);
     if(window.confirm('¿Estas seguro que desea Eliminar este presupuesto ?')){
@@ -93,7 +93,7 @@ export class PresupuestopapeleraComponent implements OnInit {
   }//fin metodo borrar
 
   cambiarEstado(presupuesto: Presupuesto, id1: number, estado: string) {
-    let budgetURL= 'http://localhost:8080/api/budget/'
+    let budgetURL= 'http://142.93.113.147:8080/api/budget/'
     let body = JSON.stringify(presupuesto);
     let headers = new Headers({
       'Content-Type':'application/json'
